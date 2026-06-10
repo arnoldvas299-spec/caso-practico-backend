@@ -39,7 +39,8 @@ class Database
         if (self::$connection === null) {
             self::loadConfig();
             try {
-                $dsn = "mysql:host=" . self::$host . ";dbname=" . self::$dbname . ";charset=" . self::$charset;
+                $port = getenv('DB_PORT') ?: '3306';
+                $dsn = "mysql:host=" . self::$host . ";port=" . $port . ";dbname=" . self::$dbname . ";charset=" . self::$charset;
 
                 $options = [
                     PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
