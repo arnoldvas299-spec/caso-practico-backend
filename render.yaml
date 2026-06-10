@@ -1,0 +1,20 @@
+# render.yaml - Blueprint para deploy automático en Render
+# Docs: https://render.com/docs/blueprint-spec
+
+services:
+  - type: web
+    name: caso-practico-backend
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: DB_HOST
+        sync: false
+      - key: DB_NAME
+        sync: false
+      - key: DB_USER
+        sync: false
+      - key: DB_PASSWORD
+        sync: false
+      - key: BASE_URL
+        value: /

@@ -1,0 +1,15 @@
+{
+    "name": "senati/caso-practico-backend",
+    "description": "Caso Práctico - Backend Developer Web con PHP, MySQL y MVC",
+    "type": "project",
+    "require": {
+        "dompdf/dompdf": "^2.0"
+    },
+    "autoload": {
+        "classmap": [
+            "app/models/",
+            "app/controllers/",
+            "config/"
+        ]
+    }
+}

@@ -1,0 +1,12 @@
+# Dependencias de Composer
+vendor/
+
+# Reportes generados
+reports/*.pdf
+
+# Variables de entorno
+.env
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
